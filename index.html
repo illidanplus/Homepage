@@ -7,6 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title id="title">The Raging Sea</title>
 
+<!--下面是特效CSS引用！-->
+<link rel="stylesheet" href="css/normalize.min.css">
+<link rel="stylesheet" href="css/style.css">
+<!--上面是特效CSS引用！-->
 
 </script><script type="text/javascript">
 var d = new Date()
@@ -557,12 +561,6 @@ li{
 </form>
 </div>
 
-
-
-<!--下面是特效CSS引用！-->
-<link rel="stylesheet" href="css/normalize.min.css">
-<link rel="stylesheet" href="css/style.css">
-
 </head>
 <body>
 
@@ -741,7 +739,7 @@ window.addEventListener('resize', move_input);
 function search(){if(document.getElementById("search_input").value != ""){window.location.href = "https://www.baidu.com/s?ie=utf-8&rn=30&tn=baiduhome_pg&oq=%E5%BC%A0%E7%B1%BD%E6%B2%90&rsv_enter=0&wd=" + document.getElementById("search_input").value;document.getElementById("search_input").value = "";}return false;}</script>
 
 
-<!--以下为canvas背景特效，不动！-->
+<!--以下为wave的canvas背景特效，不动！-->
 <script id="vertexShader" type="x-shader/x-vertex">
   #include <fog_pars_vertex>
 
