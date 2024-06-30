@@ -1,745 +1,31 @@
 <!DOCTYPE html>
-<html lang="en" >
-<head>
-<meta charset="UTF-8">
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta content="en-us" http-equiv="Content-Language">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title id="title">The Raging Sea</title>
-<!--下面是特效CSS引用！-->
-<link rel="stylesheet" href="css/normalize.min.css">
-<link rel="stylesheet" href="css/style.css">
-<!--上面是特效CSS引用！-->
-</script><script type="text/javascript">
-var d = new Date()
-var time = d.getHours()
-if (time < 24) 
-{
-document.getElementById("title").innerHTML="可以睡了！";
-}
-if (time < 22) 
-{
-document.getElementById("title").innerHTML="准备睡了!";
-}
-if (time < 20) 
-{
-document.getElementById("title").innerHTML="还能搞事!";
-}
-if (time < 18) 
-{
-document.getElementById("title").innerHTML="下午搬砖!";
-}
-if (time < 12) 
-{
-document.getElementById("title").innerHTML="上午搬砖!";
-}
-if (time < 7) 
-{
-document.getElementById("title").innerHTML="起来搬砖!";
-}
-if (time < 5) 
-{
-document.getElementById("title").innerHTML="还能睡会!";
-}
-</script>
-
-
-<style>
-
-
-/*翻译主页整体样式 
-文本对齐︰ 中心;
-背景色︰ #f1f6ee 
-使用夜间默认时修改为#000000即可
-*/
-
-body {
-	text-align: center;
-    background-image:none !important;
-/*已有效果代码，上行可赋空。常规可换图片地址('img/bg.jpg') !important*/
-    background-size: 100% !important;
-    background-repeat: no-repeat;
- 	background-color: #ffffff;
-/*可删上面的固定句语*/
-}
-
-/*翻译
-搜索栏字体样式 
-宽度︰ 90%;
-高度︰ 40px;
-背景颜色︰ 透明;
-边境︰ 无;
-大纲︰ 0;
-字体大小︰ 16px;
-字体颜色: #4a4266;
-填充︰ 0 10px;
-边界半径︰ 50px
-*/
-
-#search_input {
-	width: 100%;
-	height: 40px;
-	background-color: transparent;
-	border: none;
-	outline: 0;
-	font-size: 16px;
-	color: #4a4266;
-	padding: 0 10px;
-	border-radius: 50px
-}
-
-/*翻译
-搜索框边距 
-下边距︰ 10px;
-上边距︰ 90px;
-*/
-
-.search_part {
-	margin-bottom: 10px;
-	margin-top: 90px;
-}
-
-	/*翻译
-跨度样式
-显示︰ 阻止;
-字体大小︰ 12px;
-溢出︰ 隐藏;
-左填充︰ 2px;
-垂直对齐︰ 居中;
-*/
-
-span {
-	display: block;
-	font-size: 12px;
-	overflow: hidden;
-	padding-left: 2px;
-	vertical-align: middle;
-}
-
-/*翻译
-搜索栏框架样式 {
-框阴影︰ 0 0 5px rgba(70,70,40,.255);括号里的颜色为Rgb默认，可进入http://rgb.phpddt.com/查询
--webkit 动画︰ fadeIn 2.5s;
-动画︰ fadeIn 2.5s;
-背景色︰ rgba(255,255,255,.100);
-边界半径︰ 3px;
-显示︰ 表;
-垂直对齐︰ 居中;
-宽度︰ 80%;根据你喜欢的宽度调整，目前我为了对齐图标使用80%
-高度︰ 20px;
-最大宽度︰ 400px;
-边距︰ 10px 自动布局;
-}
-*/
-
-.search_bar {
-	box-shadow: 0 0 5px rgba(70,70,40,.255);
-	-webkit-animation: fadeIn 2.5s;
-	animation: fadeIn 2.5s;
-	background-color: transparent;
-	border-radius: 3px;
-	display: table;
-	vertical-align: middle;
-	width: 100%;
-	height: 20px;
-	max-width: 400px;
-	margin: 10px auto;
-}
-
-	/*翻译
-搜索栏搜索目标确认图标样式
-轮廓边框︰ 0;
-高度︰ 40px;
-浮标位置︰ 右;
-颜色: #4a4266;
-字体大小︰ 18px;
-字体粗细︰ 500;
-边境︰ 无;
-背景颜色︰ 透明;
-填充︰ 0 13px 0 13px
-*/
-
-#search_submit {
-	outline: 0;
-	height: 40px;
-	float: right;
-	color: #4a4266;
-	font-size: 18px;
-	font-weight: 500;
-	border: none;
-	background-color: transparent;
-	padding: 0 13px 0 13px
-}
-
-/*翻译
-书签图标排版目录样式 
-宽度︰ 100%;
-文本对齐︰ 居中;
-填充顶部︰ 25px;
-填充底部︰ 15px;
-*/
-
-#content {
-	width: 100%;
-	text-align: center;
-	padding-top: 25px;
-	padding-bottom: 15px;
-}
-
-/*翻译
-书签框架样式
--webkit 动画︰ fadeInDown 1s;
-动画︰ fadeInDown 1s;
-位置︰ 相对应;
-显示︰ 显示在内部;
-宽度︰ 75px;
-边境︰ 0;
-*/
-
-.box {
-	-webkit-animation: fadeInDown 1s;
-	animation: fadeInDown 1s;
-	position: relative;
-	display: inline-block;
-	width: 75px;
-	border: 0;
-}
-
-/*翻译
-书签图标样式
-宽度︰ 100%;
-高度︰ 100%;
-位置︰ 不受限制;
-左︰ 0;
-顶︰ 0;
-*/
-
-.box a {
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	left: 0;
-	top: 0;
-}
-
-/*翻译
-书签字体样式
-颜色: #232323;使用夜间模式时修改为#eee或者#f2eada即可
-高度︰ 1.5em;
-线的高度︰ 1.5em;
-宽度︰ 72px;
-字体大小︰ 0.75em;
-白色空间︰ nowrap;
-溢出︰ 隐藏;
-边距︰ 自动布局;
--webkit 边框顶部右半径︰ 5px;
--webkit 边框底部右半径︰ 5px;
-文本溢出︰ 省略;
--o 文本溢出︰ 省略;
-气相色谱-质谱-文本溢出︰ 省略;
-填充顶部︰ 3px;
-填充底部︰ 8px;
-*/
-
-.url {
-	color: #fff;
-	height: 1.5em;
-	line-height: 1.5em;
-	width: 72px;
-	font-size: 0.75em;
-	white-space: nowrap;
-	overflow: hidden;
-	margin: auto;
-	-webkit-border-top-right-radius: 5px;
-	-webkit-border-bottom-right-radius: 5px;
-	text-overflow: ellipsis;
-	-o-text-overflow: ellipsis;
-	-ms-text-overflow: ellipsis;
-	padding-top: 3px;
-	padding-bottom: 8px;
-}
-
-	/*翻译
-字体样式 
-宽度︰ 3em;
-高度︰ 3em;
-最大宽度︰ 72px;
-*/
-
-.icon {
-	width: 3em;
-	height: 3em;
-	max-width: 72px;
-}
-
-
-/*以下为一言一诗的宽度设置*/
-#app-items {
-	width: 100%;
-	max-width: 600px;
-	margin: 0px auto;
-	text-align: center;
-	background-color: transparent;;
-	padding-top: 0px;
-	padding-bottom: 15px;
-}
-
-
-/*以下.title仅设置一言标题本身，color设置颜色。需要保留*/
-.title {
-    background-color: transparent;
-    font-size: 25px;
-    height: 30px;
-    line-height: 30px;
-    padding: 0 10px 0 20px;
-    color: #70DB93;
-}
-/*以上.title仅设置一言标题本身，color设置颜色。需要保留*/
-
-
-/*翻译:以下为页面效果，千万勿动！！！*/
-@-webkit-keyframes flipInX {
-	0% {
-		-webkit-transform: perspective(400px) rotateX(90deg);
-		transform: perspective(400px) rotateX(90deg);
-		opacity: 0
-	}
-
-	40% {
-		-webkit-transform: perspective(400px) rotateX(-10deg);
-		transform: perspective(400px) rotateX(-10deg)
-	}
-
-	70% {
-		-webkit-transform: perspective(400px) rotateX(10deg);
-		transform: perspective(400px) rotateX(10deg)
-	}
-
-	100% {
-		-webkit-transform: perspective(400px) rotateX(0);
-		transform: perspective(400px) rotateX(0);
-		opacity: 1
-	}
-}
-
-@keyframes flipInX {
-	0% {
-		-webkit-transform: perspective(400px) rotateX(90deg);
-		-ms-transform: perspective(400px) rotateX(90deg);
-		transform: perspective(400px) rotateX(90deg);
-		opacity: 0
-	}
-
-	40% {
-		-webkit-transform: perspective(400px) rotateX(-10deg);
-		-ms-transform: perspective(400px) rotateX(-10deg);
-		transform: perspective(400px) rotateX(-10deg)
-	}
-
-	70% {
-		-webkit-transform: perspective(400px) rotateX(10deg);
-		-ms-transform: perspective(400px) rotateX(10deg);
-		transform: perspective(400px) rotateX(10deg)
-	}
-
-	100% {
-		-webkit-transform: perspective(400px) rotateX(0);
-		-ms-transform: perspective(400px) rotateX(0);
-		transform: perspective(400px) rotateX(0);
-		opacity: 1
-	}
-}
-
-@-webkit-keyframes fadeIn {
-	0% {
-		opacity: 0
-	}
-
-	100% {
-		opacity: 1
-	}
-}
-
-@keyframes fadeIn {
-	0% {
-		opacity: 0
-	}
-
-	100% {
-		opacity: 1
-	}
-}
-
-@-webkit-keyframes fadeInDown {
-	0% {
-		opacity: 0;
-		-webkit-transform: translateY(-20px);
-		transform: translateY(-20px)
-	}
-
-	100% {
-		opacity: 1;
-		-webkit-transform: translateY(0);
-		transform: translateY(0)
-	}
-}
-
-@keyframes fadeInDown {
-	0% {
-		opacity: 0;
-		-webkit-transform: translateY(-20px);
-		-ms-transform: translateY(-20px);
-		transform: translateY(-20px)
-	}
-
-	100% {
-		opacity: 1;
-		-webkit-transform: translateY(0);
-		-ms-transform: translateY(0);
-		transform: translateY(0)
-	}
-}
-
-
-
-</style>
-
-<style>
-
-canvas {
-    padding:0;
-    margin:0;
-position: absolute;
-    z-index: -1;
-left:0px;
-
-}
-
-/*翻译:以下为输入框内输入内容本身的设置，字体最大为40px，超过会溢出。最小最好大于12px；有自带搜索框，所有与搜索相关代码均可删除！！！*/
-#search_input {
-	width: 100%;
-	height: 40px;
-	background-color: transparent;
-	border: none;
-	outline: 0;
-	font-size: 16px;
-	color: #000000;
-}
-
-/*翻译
-搜索框边距 
-下边距︰ 10px;
-上边距︰ 40px;
-*/
-
-.search_part {
-	margin-bottom: 10px;
-	margin-top: 40px;
-}
-
-/*翻译
-跨度样式
-显示︰ 阻止;
-字体大小：12px;
-溢出︰ 隐藏;
-左填充︰ 2px;
-右边距：42px;
-垂直对齐︰ 居中;
-*/
-
-.search_bar span {
-	display: block;
-	font-size: 12px;
-	overflow: hidden;
-	padding-left: 2px;
-	margin-right: 42px;
-	vertical-align: middle;
-}
-.search_bar span i {
-	display:none;
-	float: right;
-	width: 35px;
-	height: 40px;
-	background: url(img/clear.png) no-repeat center;
-	background-size: 16px;
-}
-.search_bar .si {
-	margin: 0 38px 0 10px;
-}
-
-li{
-	list-style: none;
-}
-
-/*搜索建议条*/
-#suggest {
-	position: absolute;
-	left: -1px;
-	right: -1px;
-	top: 40px;
-	border:1px solid #ccc;
-	background: #fff;
-	line-height: 40px;
-}
-#suggest li {
-	border-bottom: 1px solid #ccc;
-	text-align: left;
-	padding-left: 16px;
-}
-#suggest li:active {
-	background: #F0F0F0;
-}
-#suggest li b {
-	float: right;
-	width: 44px;
-	height: 40px;
-	background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAI5JREFUSEtjZCACLF261J6RkbELpPT///9l0dHRB4nQRlgJ0ODny5Yt+w/CIDZhHUSqgBkKo4nURljZqMHwMBohQQFK/ECvnkT3LgX8kyAzGZATPwWGgTMPSiYCGvyEWgYiGfyEAcjxoKaroWZ5EM52QBUjJLkRExajQUH7Qgg5E4HYxMQLUWpgmYiUxA8AOdLMz+iDKvIAAAAASUVORK5CYII=) no-repeat scroll center center #fff;
-	background-size: 11px;
-}
-#suggest .close {
-	text-align: right;
-	font-size: 14px;
-	color: #888;
-	padding-right: 12px;
-}
-
-
-.search_bar {
-	box-shadow: 0 0 5px rgba(70,70,40,.255);
-	-webkit-animation: fadeIn 2.5s;
-	animation: fadeIn 2.5s;
-	background-color: #fff;
-	opacity: 0.4;
-
-	border-radius: 3px;
-	display: table;
-	vertical-align: middle;
-	width: 80%;
-	height: 20px;
-	max-width: 600px;
-	margin: 10px auto;
-	position: relative;
-	z-index: 10;
-}
-
-#search_submit {
-	outline: 0;
-	height: 40px;
-	float: right;
-	color: #125;
-	font-size: 18px;
-	font-weight: 500;
-	border: none;
-	background-color: transparent;
-	padding: 0 13px 0 13px
-}
-
-</style>
-<style>html, * {-webkit-user-select:text!important; -moz-user-select:text!important;}</style>
-
-
-<body>
-<!--下面是固定网址的定位！-->
-<canvas id="mysit" width="device-width" height="device-height"></canvas>
-<div id="content" style="z-index: 2;position: relative;">
-<br>
-<div class="search_part">
-<br>
-<form id="search_form" onsubmit="return search()" class="search_bar">
-<input type="submit" id="search_submit" value="✢">
-<span><i id="clear" onclick="clear_seach()"></i><div class="si"><input class="search" type="text" value="" onkeyup="get_suggest()" onfocus="get_suggest()" onpaste="get_suggest()" autocomplete="off" id="search_input" placeholder="✎..."></div>
-</span>
-<div id="suggest" style="display:none">
-	<ul id="suglist"></ul>
-	<div class="close" onclick="close_sug()">| 收起</div>
-</div>
-</form>
-</div>
-
-
-
-
-
-</head>
-<body>
-
-<!--下面是收藏网址！-->
-<div class="box">
-<a href="https://www.gatherfind.com/"></a>
-<p><img class="icon" src="https://pic.jitudisk.com/public/2022/01/29/4fc48f69d6ae4.png"></p>
-<p class="url">密集阵</p>
-</div>
-
-
-<div class="box">
-<a href="https://pan.baidu.com/disk/main?from=homeFlow#/index?category=all"></a>
-<p><img class="icon" src="https://pic.jitudisk.com/public/2022/01/29/d4db1d79d20de.png"></p>
-<p class="url">毒盘</p>
-</div>
-
-
-
-<div class="box">
-<a href="https://www.aliyundrive.com/drive"></a>
-<p><img class="icon" src="https://pic.jitudisk.com/public/2022/01/29/e216cb6311825.png"></p>
-<p class="url">阿里云盘</p>
-</div>
-
-
-<div class="box">
-<a href="https://www.wikifeetx.com/"></a>
-<p><img class="icon" src="https://pic.jitudisk.com/public/2022/01/29/be3aedae0a132.png"></p>
-<p class="url">1024</p>
-</div>
-
-
-<div class="box">
-<a href="https://madoupan.com/"></a>
-<p><img class="icon" src="https://pic.jitudisk.com/public/2022/01/29/7633b57694a06.png"></p>
-<p class="url">麻豆盘</p>
-</div>
-
-
-<div class="box">
-<a href="http://sjgs2.lexun.cn/touch/bbs_listbymodel.aspx?forumid=9021&lxt=a25c6121047e7b13rvcvgtsxq&vs=2&_r=1475785424"></a>
-<p><img class="icon" src="https://pic.jitudisk.com/public/2022/01/29/590fb80968d2a.png"></p>
-<p class="url">乐讯高手</p>
-</div>
-
-
-<div class="box">
-<a href="http://www.52flac.com/"></a>
-<p><img class="icon" src="https://pic.jitudisk.com/public/2022/01/29/6d234497489a6.png"></p>
-<p class="url">52flac</p>
-</div>
-
-
-<div class="box">
-<a href="https://trow.cc/"></a>
-<p><img class="icon" src="https://pic.jitudisk.com/public/2022/01/29/6e283a26893bd.jpg"></p>
-<p class="url">特珞</p>
-</div>
-
-
-<div class="box">
-<a href="https://mail.163.com/"></a>
-<p><img class="icon" src="https://pic.jitudisk.com/public/2022/01/29/f5bd92110bf3f.png"></p>
-<p class="url">163邮箱</p>
-</div>
-
-
-</div>
-
-<div style="z-index: 1;position: relative;">
-<div id="app-items">
-<div class="title">
-<strong>今生休去,人老沧海,心再天山！<strong>
-</div>
-<br>
-
-<!--上面是收藏网址！-->
-
-
-<!--下面是随机今日诗词！-->
-<script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
-<div id="poem_sentence"></div>
-<div id="poem_info"></div>
-<script type="text/javascript">
-  jinrishici.load(function(result) {
-    var sentence = document.querySelector("#poem_sentence")
-    var info = document.querySelector("#poem_info")
-    sentence.innerHTML = result.data.content
-    info.innerHTML = '【' + result.data.origin.dynasty + '】' + result.data.origin.author + '《' + result.data.origin.title + '》'
-  });
-</script>
-<!--上面是随机今日诗词！-->
-<br>
-<!--下面两行是随机一言！-->
-<p id="hitokoto"></p>
-<script src="https://v1.hitokoto.cn/?encode=js&select=%23hitokoto" defer></script>
-<!--上面两行是随机一言！-->
-
-
-<script type="text/javascript">	
-var last_kw = '';
-var max_sug_len = 1; //搜索建议最短触发长度
-
-/*获取搜索建议采用的神马搜索的服务*/
-function get_suggest() {
-	var kw = document.getElementById('search_input').value;
-	var clear = document.getElementById('clear');
-	if (kw) clear.style.display = 'block';
-	else clear.style.display = 'none';
-	if (kw == last_kw) return;
-	last_kw = kw;
-	if (!kw || kw.length < max_sug_len) {
-		close_sug();
-		return;
-	}
-	var script = document.createElement('script');
-	script.type = 'text/javascript';
-	script.src = 'http://sugs.m.sm.cn/web?t=w&uc_param_str=dnnwnt&scheme=http&fr=android&bid=1&q=' + encodeURIComponent(kw) + '&_=' + new Date().getTime() + '&callback=jsonp3';
-	var head = document.querySelector('head');
-	script.onload = function() {
-      head.removeChild(script);
-	};
-	head.appendChild(script);
-}
-function jsonp3(res) {
-	var suggest = document.getElementById('suggest');
-	if (!res.r || !res.r.length) {
-		suggest.style.display = 'none';
-		return;
-	}
-	var html = '';
-	res.r.forEach(function(v) {
-		html += '<li>' + v.w + '<b></b></li>';
-	});
-	document.getElementById('suglist').innerHTML = html;
-	suggest.style.display = 'block';
-}
-function close_sug() {
-	last_kw = '';
-	document.getElementById('suggest').style.display = 'none';
-}
-function move_input() {
-	document.body.scrollTop = document.getElementById('search_form').offsetTop - 2;
-}
-function clear_seach() {
-	var input = document.getElementById('search_input');
-	input.value = '';
-	document.getElementById('clear').style.display = 'none';
-	close_sug();
-	input.focus();
-}
-function search(){if(document.getElementById("search_input").value != ""){
-//window.location.href = "http://m.baidu.com/s?ie=utf-8&rn=30&tn=baiduhome_pg&oq=%E5%BC%A0%E7%B1%BD%E6%B2%90&rsv_enter=0&wd=" + encodeURIComponent(document.getElementById("search_input").value);
-window.location.href = "http://m.sm.cn/s?q=" + encodeURIComponent(document.getElementById("search_input").value) + "&from=smor&safe=1&snum=1";
-document.getElementById("search_input").value = "";}return false;}
-
-document.getElementById('suglist').addEventListener('click', function(e) {
-	var input = document.getElementById('search_input');
-	if (e.target.tagName == 'B') {
-		input.value = e.target.parentNode.firstChild.textContent;
-		input.focus();
-	} else if (e.target.tagName == 'LI') {
-		input.value = e.target.firstChild.textContent;
-		close_sug();
-		search();
-	}
-});
-window.addEventListener('resize', move_input);
-</script>
-
-
-
-<script type="text/javascript">
-function search(){if(document.getElementById("search_input").value != ""){window.location.href = "https://www.baidu.com/s?ie=utf-8&rn=30&tn=baiduhome_pg&oq=%E5%BC%A0%E7%B1%BD%E6%B2%90&rsv_enter=0&wd=" + document.getElementById("search_input").value;document.getElementById("search_input").value = "";}return false;}</script>
-
-
-<!--以下为wave的canvas背景特效，不动！-->
-<script id="vertexShader" type="x-shader/x-vertex">
-  #include <fog_pars_vertex>
+<html lang="zh-cn">
+	<head>
+		<meta charset="UTF-8">
+		<title>尤龍的导航</title>
+		<meta content="en-us" http-equiv="Content-Language" />
+		<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet icon" href="img/icon.svg" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link rel="stylesheet" type="text/css" href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" />
+		<!--wave-->
+		<link rel="stylesheet" href="css/normalize.min.css">
+		<!--wave-->
+		<!--侧边栏-->
+		<script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.5.1.min.js"></script>
+		<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+		<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+		<!--侧边栏-->
+		<!--看板-->
+		<link rel="stylesheet" href="./kbn/font-awesome.min.css">
+		<link href="./kbn/waifu.css" rel="stylesheet" type="text/css">
+		<!--看板-->
+	</head>
+	<body>
+		<div>
+			<script id="vertexShader" type="x-shader/x-vertex">
+				#include <fog_pars_vertex>
 
 uniform float uTime;
 
@@ -860,9 +146,9 @@ void main() {
   vElevation = elevation;
 }
 </script>
-<script id="fragmentShader" type="x-shader/x-fragment">
-  #include <fog_pars_fragment>
-precision mediump float;
+			<script id="fragmentShader" type="x-shader/x-fragment">
+				#include <fog_pars_fragment>
+precision mediump float;// 频率调整
 uniform vec3 uDepthColor;
 uniform vec3 uSurfaceColor;
 
@@ -878,13 +164,161 @@ void main() {
    #include <fog_fragment>
 }
 </script>
+		</div>
 
-<canvas class="webgl"></canvas>
+		<iframe width="auto" scrolling="auto" height="89" frameborder="0" allowtransparency="true"
+			src="http://i.tianqi.com/index.php?c=code&id=12&icon=1&num=3"></iframe>
 
-<script src='js/three.min.js'></script>
-<script src='js/OrbitControls.js'></script>
-<script src='js/dat.gui.min.js'></script>
-<script src="js/script.js"></script>
 
-</body>
+		<!--侧边栏-->
+		<div class="sidebar">
+			<ul>
+				<li><a class="ion-icon" href="https://illidan47.gitee.io/viapage"><ion-icon
+							name="phone-portrait-outline"></ion-icon></a></li>
+				<li><a class="ion-icon" href="https://illidan47.gitee.io/wavepage/"><ion-icon
+							name="laptop-outline"></ion-icon></a></li>
+				<li><a class="ion-icon" href="https://illidan47.gitee.io/anav/"><ion-icon
+							name="navigate-outline"></ion-icon></a></li>
+				<li><a class="ion-icon" href="https://illidan47.gitee.io/anav/wnl.html"><ion-icon
+							name="calendar-outline"></ion-icon></a></li>
+				<li><a class="ion-icon" href=""><ion-icon name="headset-outline"></ion-icon></a></li>
+				<li><a class="ion-icon" href=""><ion-icon name="skull-outline"></ion-icon></a></li>
+				<li><a class="ion-icon" href=""><ion-icon name="settings-outline"></ion-icon></a></li>
+			</ul>
+		</div>
+
+		<a class="btn"></a>
+
+		<script type="text/javascript">
+			$('.btn').on('click', function() {
+				$('.btn').toggleClass('btnb');
+				$('.sidebar').toggleClass('side');
+			})
+		</script>
+		<!--侧边栏-->
+
+		<!--搜索模块-->
+		<div id="content">
+			<div class="search_part">
+				<form id="search_form" onsubmit="return search()" class="search_bar">
+					<input type="submit" id="search_submit" value="✢">
+					<span><i id="clear" onclick="clear_seach()"></i>
+						<div class="si"><input class="search" type="text" value="" onkeyup="get_suggest()"
+								onfocus="get_suggest()" onpaste="get_suggest()" autocomplete="off" id="search_input"
+								placeholder="✎..."></div>
+					</span>
+					<div id="suggest" style="display:none">
+						<ul id="suglist"></ul>
+						<div class="close" onclick="close_sug()">| 收起</div>
+					</div>
+				</form>
+			</div>
+		</div>
+		<!--搜索模块-->
+
+		<!--侧边导航-->
+		<div class="navigation">
+			<div class="box">
+				<!--侧边导航-->
+
+				<a href="https://www.gatherfind.com/"></a>
+				<p><img class="icon" src="https://s4.ax1x.com/2022/02/13/HDcQbR.png"></p>
+				<p class="url">密集阵</p>
+			</div>
+
+
+			<div class="box">
+				<a href="http://pan.baidu.com/wap/home"></a>
+				<p><img class="icon" src="https://s4.ax1x.com/2022/02/13/HDcNxe.png"></p>
+				<p class="url">毒盘</p>
+			</div>
+
+
+			<div class="box">
+				<a href="https://www.aliyundrive.com/drive"></a>
+				<p><img class="icon" src="https://s4.ax1x.com/2022/02/24/biVq6e.png"></p>
+				<p class="url">阿里云盘</p>
+			</div>
+
+
+			<div class="box">
+				<a href="https://www.wikifeetx.com/"></a>
+				<p><img class="icon" src="https://s4.ax1x.com/2022/02/13/HDcMr9.png"></p>
+				<p class="url">1024</p>
+			</div>
+
+
+			<div class="box">
+				<a href="http://3mo.net:2048/"></a>
+				<p><img class="icon" src="https://s4.ax1x.com/2022/02/13/HDct2D.png"></p>
+				<p class="url">2048</p>
+			</div>
+
+
+			<div class="box">
+				<a href="https://tools.miku.ac/"></a>
+				<p><img class="icon" src="https://s4.ax1x.com/2022/02/02/HkxBaq.png"></p>
+				<p class="url">MikuTools</p>
+			</div>
+
+
+			<div class="box">
+				<a href="https://trow.cc/"></a>
+				<p><img class="icon" src="https://s4.ax1x.com/2022/02/13/HDcY8O.jpg"></p>
+				<p class="url">特珞</p>
+			</div>
+
+
+			<div class="box">
+				<a href="https://mail.163.com/"></a>
+				<p><img class="icon" src="https://s4.ax1x.com/2022/02/13/HDcJPK.png"></p>
+				<p class="url">163邮箱</p>
+			</div>
+
+
+			<div class="box">
+				<a href="https://gitee.com/"></a>
+				<p><img class="icon" src="https://gitee.com/static/images/logo_themecolor.png"></p>
+				<p class="url">Gitee</p>
+			</div>
+
+		</div>
+
+		<!--下面两行是随机一言！-->
+		<div id="app-items">
+			<div class="hitokoto">
+				<p id="hitokoto"></p>
+				<script src="https://v1.hitokoto.cn/?encode=js&select=%23hitokoto" defer></script>
+			</div>
+			
+		<!--时间-->
+		<div id="timedp" class="time"></div>
+			<script type="text/javascript" src="js/timedp.js"></script>
+        <!--时间-->	
+
+			<!--下面是随机今日诗词！-->
+			<script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+			<div id="poem_sentence"></div>
+			<div id="poem_info"></div>
+			<script type="text/javascript">
+				jinrishici.load(function(result) {
+					var sentence = document.querySelector("#poem_sentence")
+					var info = document.querySelector("#poem_info")
+					sentence.innerHTML = result.data.content
+					info.innerHTML = '【' + result.data.origin.dynasty + '】' + result.data.origin.author + '《' + result.data
+						.origin.title + '》'
+				});
+			</script>
+			<!--上面是随机今日诗词！-->
+			<script type="text/javascript" src="js/search.js"></script>
+		</div>
+	</body>
+	<canvas class="webgl"></canvas>
+	<script src='js/three.min.js'></script>
+	<script src='js/OrbitControls.js'></script>
+	<script src='js/dat.gui.min.js'></script>
+	<script src="js/wave.js"></script>
+	<!--下面看板娘-->
+	<script src="./kbn/autoload.js"></script>
+	<!--上面看板娘-->
 </html>
