@@ -1,13 +1,669 @@
-* {
-  margin: 0;
-  padding: 0;
-}
-
-html,
 body {
-  overflow: hidden;
+
+    text-align: center;
+
+    /*background-image: url('imags/bg.png') !important;已有效果代码，上行可赋空。常规可换图片地址('img/bg.jpg') */
+
+    background-size: 100% !important;
+
+    background-repeat: no-repeat;
+
+    background-color: transparent;
+
+}
+/*翻译
+搜索框边距 
+下边距︰ 5px;
+上边距︰ 15px;
+*/
+.search_part{
+
+    margin-bottom: 5px;
+
+    margin-top: 5px;
+
 }
 
+/*翻译
+搜索栏搜索目标确认图标样式
+轮廓边框︰ 0;
+高度︰ 40px;
+浮标位置︰ 右;
+颜色: #70DB93;
+字体大小︰ 18px;
+字体粗细︰ 500;
+边境︰ 无;
+背景颜色︰ 透明;
+填充︰ 0 13px 0 13px
+*/
+#search_submit {
+
+    outline: 0;
+
+    height: 65px;
+
+    float: right;
+
+    color: #70DB93;
+
+    font-size: 20px;
+
+    font-weight: 500;
+
+    border: none;
+
+    background-color: transparent;
+
+    padding: 0 13px 0 13px
+
+}
+/*翻译
+搜索栏字体样式 
+宽度︰ 90%;
+高度︰ 64px;
+背景颜色︰ 透明;
+边境︰ 无;
+大纲︰ 0;
+字体大小︰ 32px;
+字体颜色: #4a4266;
+填充︰ 0 10px;
+边界半径︰ 50px
+*/
+#search_input {
+
+    width: 99%;
+
+    height: 4rem;
+
+    background-color: transparent;
+
+    border: none;
+
+    outline: 0;
+
+    font-size: 2rem;
+
+    color: #70DB93;
+
+    padding: 0 10px;
+
+    border-radius: 50px
+
+}
+
+/*翻译
+搜索栏框架样式 {
+框阴影︰ 0 0 5px rgba(70,70,40,255);括号里的颜色为Rgb默认，可进入http://rgb.phpddt.com/查询
+-webkit 动画︰ fadeIn 2.5s;
+动画︰ fadeIn 2.5s;
+背景色︰ rgba(255,255,255,0);
+边界半径︰ 3px;
+显示︰ 表;
+垂直对齐︰ 居中;
+宽度︰ 80%;根据你喜欢的宽度调整，目前我为了对齐图标使用80%
+高度︰ 20px;
+最大宽度︰ 600px;
+边距︰ 10px 自动布局;
+}
+*/
+.search_bar {
+
+    box-shadow: 0 0 5px rgba(70, 70, 40, 255);
+
+    -webkit-animation: fadeIn 2.5s;
+
+    animation: fadeIn 2.5s;
+
+    background-color: rgba(255, 255, 255, 0);
+
+    border-radius: 3px;
+
+    display: table;
+
+    vertical-align: middle;
+
+    width: 73%;
+
+    height: 3rem;
+
+    max-width: 70rem;
+
+    margin: 10px auto;
+
+    position: relative;
+
+    z-index: 1;
+
+}
+
+/*翻译
+跨度样式
+显示︰ 阻止;
+字体大小︰ 12px;
+溢出︰ 隐藏;
+左填充︰ 2px;
+右外边距︰ 42px;
+垂直对齐︰ 居中;
+*/
+.search_bar span {
+
+    display: block;
+
+    font-size: 1rem;
+
+    overflow: hidden;
+
+    padding-left: 2px;
+
+    margin-right: 42px;
+
+    vertical-align: middle;
+
+}
+
+.search_bar span i {
+
+    display: none;
+
+    float: right;
+
+    width: 35px;
+
+    height: 40px;
+
+    /*background: url(imags/clear.png) no-repeat center;*/
+
+    background-size: 16px;
+
+}
+
+.search_bar .si {
+
+    margin: 0 38px 0 10px;
+
+}
+
+#suggest {
+
+    position: absolute;
+
+    left: -1px;
+
+    right: -1px;
+
+    top: 4rem;
+
+    border: 1px solid #ccc;
+
+    background: #fff;
+
+    line-height: 40px;
+
+}
+
+#suggest li {
+
+    border-bottom: 1px solid #ccc;
+
+    text-align: left;
+
+    padding-left: 1rem;
+
+}
+
+#suggest li:active {
+
+    background: #F0F0F0;
+
+}
+
+#suggest li b {
+
+    float: right;
+
+    width: 44px;
+
+    height: 1rem;
+
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAI5JREFUSEtjZCACLF261J6RkbELpPT///9l0dHRB4nQRlgJ0ODny5Yt+w/CIDZhHUSqgBkKo4nURljZqMHwMBohQQFK/ECvnkT3LgX8kyAzGZATPwWGgTMPSiYCGvyEWgYiGfyEAcjxoKaroWZ5EM52QBUjJLkRExajQUH7Qgg5E4HYxMQLUWpgmYiUxA8AOdLMz+iDKvIAAAAASUVORK5CYII=) no-repeat scroll center center #fff;
+
+    background-size: 1rem;
+
+}
+
+#suggest .close {
+
+    text-align: right;
+
+    font-size: 1rem;
+
+    color: #888;
+
+    padding-right: 0.75rem;
+
+}
+
+/*翻译
+书签图标排版目录样式 
+宽度︰ 100%;
+文本对齐︰ 居中;
+填充顶部︰ 0px;
+填充底部︰ 0px;
+上外边距︰ 5%;
+*/
+#content {
+
+    width: 100%;
+
+    text-align: center;
+
+    padding-top: 0px;
+
+    padding-bottom: 0px;
+
+    margin-top: 5%;
+
+}
+/*翻译
+书签框架样式
+-webkit 动画︰ fadeInDown 1s;
+动画︰ fadeInDown 1s;
+位置︰ 相对应;
+显示︰ 显示在内部;
+宽度︰ 120px;图标间的间距
+边境︰ 0;
+*/
+.box {
+
+    -webkit-animation: fadeInDown 1s;
+
+    animation: fadeInDown 1s;
+
+    position: relative;
+
+    display: inline-block;
+
+    width: 7.5rem;
+
+    border: 0;
+
+}
+/*翻译
+书签图标样式
+宽度︰ 100%;
+高度︰ 100%;
+位置︰ 不受限制;
+左︰ 0;
+顶︰ 0;
+*/
+.box a {
+
+    width: 100%;
+
+    height: 100%;
+
+    position: absolute;
+
+    left: 0;
+
+    top: 0;
+
+}
+/*翻译
+书签字体样式
+颜色: #232323;使用夜间模式时修改为#eee或者#f2eada即可
+高度︰ 1.5em;
+线的高度︰ 1.5em;
+宽度︰ 96px;
+字体大小︰ 0.75em;
+白色空间︰ nowrap;
+溢出︰ 隐藏;
+边距︰ 自动布局;
+-webkit 边框顶部右半径︰ 5px;
+-webkit 边框底部右半径︰ 5px;
+文本溢出︰ 省略;
+-o 文本溢出︰ 省略;
+气相色谱-质谱-文本溢出︰ 省略;
+填充顶部︰ 0px;
+填充底部︰ 8px;
+*/
+.url {
+
+    color: #70DB93;
+
+    height: 1.5em;
+
+    line-height: 1.5em;
+
+    width: 5.5rem;
+
+    font-size: 1.2em;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    margin: auto;
+
+    -webkit-border-top-right-radius: 5px;
+
+    -webkit-border-bottom-right-radius: 5px;
+
+    text-overflow: ellipsis;
+
+    -o-text-overflow: ellipsis;
+
+    -ms-text-overflow: ellipsis;
+
+    padding-top: 0px;
+
+    padding-bottom: 0.5rem;
+
+}
+/*翻译
+字体样式 
+宽度︰ 3em;
+高度︰ 3em;
+最大宽度︰ 72px;
+*/
+.icon {
+
+    width: 4.5em;
+
+    height: 4.5em;
+
+    max-width: 5.5rem;
+
+}
+/*以下为两言设置。*/
+#app-items {
+    height: 6em;
+	  
+	position: relative;
+	  
+	font-size: 1.5em;
+
+    width: 100%;
+
+    max-width: 800px;
+
+    margin: 0px auto;
+
+    text-align: center;
+    
+    color: #70DB93;
+
+    background-color: transparent;
+
+    padding-top: 0px;
+
+    padding-bottom: 15px;
+
+}
+
+.title {
+
+    background-color: transparent;
+
+    font-size: 2.0em;
+
+    height: 2.0em;
+
+    line-height: 2.0em;
+
+    padding: 0 10px 0 20px;
+
+    color: #70DB93;
+
+}
+/*以上为两言设置。*/
+
+.time{width:100%; height:3.5rem; background:transparent; line-height:3.5rem; text-align:center;color: #70DB93;}
+
+@-webkit-keyframes flipInX {
+
+    0% {
+
+        -webkit-transform: perspective(400px) rotateX(90deg);
+
+        transform: perspective(400px) rotateX(90deg);
+
+        opacity: 0
+
+    }
+
+    40% {
+
+        -webkit-transform: perspective(400px) rotateX(-10deg);
+
+        transform: perspective(400px) rotateX(-10deg)
+
+    }
+
+    70% {
+
+        -webkit-transform: perspective(400px) rotateX(10deg);
+
+        transform: perspective(400px) rotateX(10deg)
+
+    }
+
+    100% {
+
+        -webkit-transform: perspective(400px) rotateX(0);
+
+        transform: perspective(400px) rotateX(0);
+
+        opacity: 1
+
+    }
+
+}
+
+@keyframes flipInX {
+
+    0% {
+
+        -webkit-transform: perspective(400px) rotateX(90deg);
+
+        -ms-transform: perspective(400px) rotateX(90deg);
+
+        transform: perspective(400px) rotateX(90deg);
+
+        opacity: 0
+
+    }
+
+    40% {
+
+        -webkit-transform: perspective(400px) rotateX(-10deg);
+
+        -ms-transform: perspective(400px) rotateX(-10deg);
+
+        transform: perspective(400px) rotateX(-10deg)
+
+    }
+
+    70% {
+
+        -webkit-transform: perspective(400px) rotateX(10deg);
+
+        -ms-transform: perspective(400px) rotateX(10deg);
+
+        transform: perspective(400px) rotateX(10deg)
+
+    }
+
+    100% {
+
+        -webkit-transform: perspective(400px) rotateX(0);
+
+        -ms-transform: perspective(400px) rotateX(0);
+
+        transform: perspective(400px) rotateX(0);
+
+        opacity: 1
+
+    }
+
+}
+
+@-webkit-keyframes fadeIn {
+
+    0% {
+
+        opacity: 0
+
+    }
+
+    100% {
+
+        opacity: 1
+
+    }
+
+}
+
+@keyframes fadeIn {
+
+    0% {
+
+        opacity: 0
+
+    }
+
+    100% {
+
+        opacity: 1
+
+    }
+
+}
+
+@-webkit-keyframes fadeInDown {
+
+    0% {
+
+        opacity: 0;
+
+        -webkit-transform: translateY(-20px);
+
+        transform: translateY(-20px)
+
+    }
+
+    100% {
+
+        opacity: 1;
+
+        -webkit-transform: translateY(0);
+
+        transform: translateY(0)
+
+    }
+
+}
+
+@keyframes fadeInDown {
+
+    0% {
+
+        opacity: 0;
+
+        -webkit-transform: translateY(-20px);
+
+        -ms-transform: translateY(-20px);
+
+        transform: translateY(-20px)
+
+    }
+
+    100% {
+
+        opacity: 1;
+
+        -webkit-transform: translateY(0);
+
+        -ms-transform: translateY(0);
+
+        transform: translateY(0)
+
+    }
+
+}
+/*canvas画布置于图层下方-1层。*/
+canvas {
+    padding:0;
+    margin:0;
+position: absolute;
+    z-index: -1;
+left:0px;
+}
+
+
+html
+{
+	height: 100%;
+	width: 100%;
+    font-family: sans-serif;
+	margin: 0;
+	padding: 0;
+}
+.sidebar{
+	float: left;
+	background: transparent;
+    margin-left: -100px;
+	height: 100%;
+	width: 100px;
+	overflow: hidden;
+	transition: 0.8s all;
+	
+}
+.side {
+	margin-left: 0;
+}
+.sidebar ul {
+	margin: 0;
+	padding: 0;
+	
+}
+.sidebar ul li{
+	list-style: none;
+	
+}
+.sidebar ul li a{
+	text-decoration: none;
+	height: 100%;
+	widows: 80px;
+	font-size: 40px;
+	color: white;
+	line-height: 80px;
+	text-align: center;
+	display: block;
+	transition: 0.8s;
+}
+.sidebar ul li a :hover{
+	background: transparent;
+}
+.btn{
+	font-size: 40px;
+	float: left;
+	color: #2c3e50;
+	padding: 0 10px;
+	text-decoration: none;
+	font-family:Ionicons;
+	cursor: pointer;
+}
+.btn:before{
+	content: "";
+	
+}
+.btnb:before{
+	content: "";
+}
+
+
+/*webgl需要填充fixed。*/
 .webgl {
   position: fixed;
   top: 0;
